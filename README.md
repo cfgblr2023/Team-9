@@ -1,4 +1,4 @@
-# Team-9
+![image](https://github.com/cfgblr2023/Team-9/assets/71785031/04ab5018-f2c5-4795-9cf4-272238b012b8)# Team-9
 
 # Image Classification with Xception Model
 
@@ -70,6 +70,10 @@ Contributions to this project are welcome. If you would like to contribute, plea
 3. Make your changes and commit them.
 4. Push your changes to your fork.
 5. Submit a pull request.
+## Model sample predictions
+![image](https://github.com/cfgblr2023/Team-9/assets/71785031/b0aff140-7474-4575-a34a-78210169f4ef)
+![image](https://github.com/cfgblr2023/Team-9/assets/71785031/37b5e22c-93d0-42be-b108-282193cce418)
+![image](https://github.com/cfgblr2023/Team-9/assets/71785031/8cd81eb8-ac93-4e37-b8f9-0a2d572c2a8a)
 
 ## License
 
