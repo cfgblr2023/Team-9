@@ -1,5 +1,5 @@
-![image](https://github.com/cfgblr2023/Team-9/assets/71785031/04ab5018-f2c5-4795-9cf4-272238b012b8)# Team-9
-The interactive reporter is in branch garv/interactive
+# Team-9
+## The interactive reporter is in branch garv/interactive
 # Image Classification with Xception Model
 
 This project demonstrates how to perform image classification using the Xception model. The Xception model is a deep convolutional neural network (CNN) architecture that has been pre-trained on the ImageNet dataset.
@@ -31,7 +31,7 @@ To run this project, you need to set up the following dependencies:
 - Python (version 3.6 or higher)
 - TensorFlow (version 2.0 or higher)
 - Pandas
-- OpenCV (cv2)
+
 
 You can install the required dependencies using pip:
 
