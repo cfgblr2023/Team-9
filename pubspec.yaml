@@ -44,6 +44,7 @@ dependencies:
   google_fonts: ^5.1.0
   cloud_firestore: ^4.8.2
   http: ^1.1.0
+  path: ^1.8.3
   
 
 dev_dependencies:
@@ -69,6 +70,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

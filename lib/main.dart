@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:sensing_local_app/screens/fetch_image.dart';
 import 'package:sensing_local_app/screens/splash_screen.dart';
+import 'package:sensing_local_app/screens/submission_page.dart';
 import 'firebase_options.dart';
 
 void main() async{
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'splash',
       routes: {
         'fetchImage' : (context) =>FetchImage(),
+        'submission' : (context) =>SubmissionPage(),
         'splash': (context) =>Splash(),
       },
     );

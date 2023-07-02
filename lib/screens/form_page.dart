@@ -1,11 +1,12 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:sensing_local_app/screens/services.dart';
 import '../widgets/AppButton.dart';
 import '../widgets/TextButtons.dart';
+import 'package:path/path.dart';
 
 class FormPage extends StatefulWidget {
   final String longitude;
@@ -25,7 +26,6 @@ class _FormPageState extends State<FormPage> {
     "Line",
     "Point"
   ];
-
   String? selectedVal = 'Point';
   @override
   Widget build(BuildContext context) {
@@ -106,7 +106,7 @@ class _FormPageState extends State<FormPage> {
                          });
 
                          //adding data in user's complaint collection
-                        
+                         String fileName = basename(widget.imageFile.path);
                           uploadImage() async{
                             // Reference reference = FirebaseStorage.instance.ref()
                             // .child('image/');
@@ -114,7 +114,7 @@ class _FormPageState extends State<FormPage> {
                             // final TaskSnapshot snapshot = (await UploadTask) as TaskSnapshot;
                             // imageUrl =  await snapshot.ref.getDownloadURL();
                           var snapshot = await FirebaseStorage.instance.ref()
-                          .child('images/imageName')
+                          .child('images/$fileName')
                           .putFile(widget.imageFile);
                            imageUrl = await snapshot.ref.getDownloadURL();
                           }
@@ -144,7 +144,7 @@ class _FormPageState extends State<FormPage> {
                           setState(() {
                             isLoading = false;
                           });
-                          Navigator.pushNamed(context, 'fetchImage');},
+                          Navigator.pushNamed(context, 'submission');},
                           isLoading: isLoading,)
 
             ],

@@ -3,18 +3,23 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:geolocator/geolocator.dart';
 import 'package:sensing_local_app/screens/form_page.dart';
+import 'package:path/path.dart';
+import 'package:sensing_local_app/screens/services.dart';
 
 Position? currentPosition;
 String latitude = '';
 String longitude = '';
+var decodedData;
 
 class PickImage extends StatefulWidget {
   @override
   State<PickImage> createState() => _PickImageState();
 }
 bool isLoading = false;
+String fileName = basename(imageFile.path);
 bool filePicked = false;
 late File imageFile;
+NetworkHelper _networkHelper = NetworkHelper();
 class _PickImageState extends State<PickImage> {
   @override
   void initState() {
@@ -55,9 +60,10 @@ class _PickImageState extends State<PickImage> {
                        isLoading= false;
                      });
                   }
+                  decodedData = _networkHelper.getData(imageFile);
                   Navigator.push(
                     context,
-                   MaterialPageRoute(builder: (context) => FormPage(category: 'Garbage', imageFile: imageFile, latitude: latitude, longitude: longitude)),
+                   MaterialPageRoute(builder: (context) => FormPage(category: decodedData['class_with_highest_probability'], imageFile: imageFile, latitude: latitude, longitude: longitude)),
                    );
                   }, icon: Icon(Icons.check_circle, size: 50, color: Colors.green,)),
                 Padding(
@@ -83,7 +89,6 @@ class _PickImageState extends State<PickImage> {
                     setState(() {
                       filePicked = true;
                     });
-
                   print(imageFile);
                   }, icon: Icon(Icons.camera_alt_sharp, size: 50, color: Colors.grey,)),
                   SizedBox( height: 10,),
