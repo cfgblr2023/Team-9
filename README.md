@@ -1,5 +1,5 @@
 # Team-9
-## The interactive reporter is in branch garv/interactive
+ 
 # Image Classification with Xception Model
 
 This project demonstrates how to perform image classification using the Xception model. The Xception model is a deep convolutional neural network (CNN) architecture that has been pre-trained on the ImageNet dataset.
@@ -75,6 +75,7 @@ Contributions to this project are welcome. If you would like to contribute, plea
 ![image](https://github.com/cfgblr2023/Team-9/assets/71785031/37b5e22c-93d0-42be-b108-282193cce418)
 ![image](https://github.com/cfgblr2023/Team-9/assets/71785031/8cd81eb8-ac93-4e37-b8f9-0a2d572c2a8a)
 
+### Note - The interactive reporter is in branch garv/interactive
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
